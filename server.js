@@ -11,7 +11,7 @@ const { GovernmentModel, GovernmentModelCopy } = require("./server/models/govern
 const { HotSpotModel, HotSpotModelCopy } = require("./server/models/hotSpot");
 const { NewsModel } = require("./server/models/news");
 
-const dataToChange = require("./src/data/business.json");
+// const dataToChange = require("./src/data/business.json");
 
 
 
@@ -43,7 +43,7 @@ app.get("*", function (req, res) {
   ) {
     res.redirect("https://" + req.headers.host + req.url);
   }
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  // res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(port);
@@ -56,8 +56,8 @@ const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-const data = require("./src/data/business.json");
-const dataSend = require("./src/data/file.json");
+// const data = require("./src/data/business.json");
+// const dataSend = require("./src/data/file.json");
 
 //write file with key
 //let dataNew = Object.values(data);
