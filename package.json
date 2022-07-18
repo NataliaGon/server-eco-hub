@@ -19,6 +19,8 @@
     "homepage": "https://github.com/NataliaGon/server-eco-hub#readme",
     "dependencies": {
         "express": "^4.18.1",
-        "mongoose": "^6.4.5"
+        "loader": "^2.1.1",
+        "mongoose": "^6.4.5",
+        "node-geocoder": "^4.2.0"
     }
 }
