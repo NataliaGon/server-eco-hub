@@ -1,9 +1,19 @@
 {
-    "engines": {
-        "node": "14.x"
-    },
-    "scripts": {
-        "start:production": "blitz start --port $PORT",
-        "build": "blitz build"
-    }
+  "name": "server-eco-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NataliaGon/server-eco-hub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NataliaGon/server-eco-hub/issues"
+  },
+  "homepage": "https://github.com/NataliaGon/server-eco-hub#readme"
 }
