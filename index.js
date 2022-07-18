@@ -43,7 +43,7 @@ app.get("*", function (req, res) {
   ) {
     res.redirect("https://" + req.headers.host + req.url);
   }
-  // res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.send('Hello World!')
 });
 
 app.listen(port);
