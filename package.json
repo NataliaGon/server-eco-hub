@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start:production": "blitz start --port $PORT",
+        "build": "blitz build"
+    }
+}
