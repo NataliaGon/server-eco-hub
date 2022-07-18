@@ -19,6 +19,7 @@
     "homepage": "https://github.com/NataliaGon/server-eco-hub#readme",
     "dependencies": {
         "@sendgrid/mail": "^7.7.0",
+        "dotenv": "^16.0.1",
         "express": "^4.18.1",
         "loader": "^2.1.1",
         "mongoose": "^6.4.5",
