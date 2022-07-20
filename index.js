@@ -1,6 +1,8 @@
 const express = require("express");
 const router = require("./server/routes/registerRoutes");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const path = require("path");
 const fs = require("fs");
 const uniqid = require("uniqid");
 const sgMail = require("@sendgrid/mail");
@@ -20,8 +22,6 @@ sgMail.setApiKey(NEXT_PUBLIC_SENDGRID_API_KEY);
 
 require("dotenv").config();
 
-const cors = require("cors");
-const path = require("path");
 const port = process.env.PORT || 8080;
 
 const app = express();
@@ -36,13 +36,6 @@ app.use(cors());
 app.use("/", router);
 
 app.get("*", function (req, res) {
-  if (
-    !req.secure &&
-    (process.env.NEXT_PUBLIC_VERSION === "production" ||
-      process.env.NEXT_PUBLIC_VERSION === "staging")
-  ) {
-    res.redirect("https://" + req.headers.host + req.url);
-  }
   res.send('Hello World!')
 });
 
