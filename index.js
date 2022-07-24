@@ -46,7 +46,10 @@ app.use(cors({
       return callback(new Error(msg), false);
     }
     return callback(null, true);
-  }
+  },
+  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
+
+  credentials: true,
 }));
 
 app.use("/", router);
