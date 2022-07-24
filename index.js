@@ -33,7 +33,7 @@ app.use(express.json({ limit: "50mb" }));
 app.enable("trust proxy");
 
 const allowedOrigins = ['http://localhost:3000',
-                      'https://eco-hub.herokuapp.com'];
+                      'http://eco-hub.herokuapp.com'];
 app.use(cors({
   origin: function(origin, callback){
     // allow requests with no origin 
