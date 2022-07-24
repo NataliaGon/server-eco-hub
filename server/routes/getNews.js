@@ -15,7 +15,6 @@ module.exports = function (req, res) {
   };
 
   const { country, field, page } = req?.query;
-  console.log(country, field, page)
 
   if ((!country || country === "all") && field) {
     getData(
