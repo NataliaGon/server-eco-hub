@@ -6,7 +6,6 @@ const hotSpotSchema = new Schema({
     type: String,
     required: true,
   },
-
   photos: {
     type: Array,
     required: true,
@@ -18,7 +17,6 @@ const hotSpotSchema = new Schema({
   author: { type: String },
   relatedOrganizations: {
     type: Array,
-
   },
   email: { type: String },
   links: {
@@ -33,25 +31,28 @@ const hotSpotSchema = new Schema({
   },
   location: {
     type: Object,
-    required: true,
+    required: true
   },
   problem: {
-    type: String,
+    type: Array,
     required: true,
   },
   timeline: {
-    type: String,
+    type: Array,
     required: true,
   },
   loc: [Number],
   date: {
-    type: String
+    type: String,
   },
   titleSEO: {
     type: String,
   },
   descriptionSEO: {
     type: String,
+  },
+  videos: {
+    type: Array,
   },
 });
 
@@ -94,14 +95,14 @@ const hotSpotNewSchema = new Schema({
   },
   location: {
     type: Object,
-    required: true,
+    required: true
   },
   problem: {
-    type: String,
+    type: Array,
     required: true,
   },
   timeline: {
-    type: String,
+    type: Array,
     required: true,
   },
   loc: [Number],
@@ -110,6 +111,9 @@ const hotSpotNewSchema = new Schema({
   },
   descriptionSEO: {
     type: String,
+  },
+  videos: {
+    type: Array,
   },
 });
 

@@ -45,7 +45,7 @@ module.exports = function (req, res) {
             MediaModel.find(
                 {
                     country: req.query.countries.split("&"),
-                }, "location key country  name",
+                }, "location key country name",
                 function (err, docs) {
                     const docsWithLocations = docs.filter(
                         (spot) => spot?.location?.lat && spot?.location?.lng
@@ -72,7 +72,7 @@ module.exports = function (req, res) {
                 getOrganizations({
                     organizationFields: req.query.organizationFields.split(","),
                     countries: req.query.countries.split("&"),
-                }), "location key country  name",
+                }), "location key country name",
                 function (err, docs) {
                     const docsWithLocations = docs.filter((spot) => {
                         return spot?.location?.lat && spot?.location?.lng;
@@ -90,7 +90,6 @@ module.exports = function (req, res) {
             findSpots({ model: OrganizationModel, fields: req.query.organizationFields.split(","), countries: req.query.countries.split("&"), bounds: boundsObj, page, res })
 
         if (req.query.filterType === "business") {
-
             findSpots({ model: BusinessModel, fields: req.query.businessFields.split(","), countries: req.query.countries.split("&"), bounds: boundsObj, page, res })
         }
 
